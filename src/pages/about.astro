@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "About";
+const description = "About your blog.";
+const permalink = `${Astro.site.href}about`;
+---
+
+<BaseLayout
+    title={title}
+    description={description}
+    permalink={permalink}
+    current="about"
+>
+    <div class="container">
+        <h1>About</h1>
+        <figure class="about-image">
+            <img
+                src="/assets/about-illustration.webp"
+                alt="Illustration of a notebook"
+                width="330"
+            />
+            <figcaption>
+                Illustration by
+                <a
+                    href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6"
+                    target="_blank"
+                    rel="noopener">Icons 8</a
+                >
+                from
+                <a
+                    href="https://icons8.com/illustrations"
+                    target="_blank"
+                    rel="noopener">Ouch!</a
+                >
+            </figcaption>
+        </figure>
+
+        <p>
+            I have no idea what I'm supposed to place in an about section.
+            Probably something about my name, what I love, what I do, and any
+            other information to help you get to know me better. Well, I don't
+            even know whether anyone is going to see this particular blog
+            anyway. But here goes nothing:
+        </p>
+        <p>
+            My name is Willow (yes, that's actually my real name). I'm a software
+            engineer. I love learning (very strange, I know). But I really do
+            enjoy learning, and I have so many interests. So, I guess that's
+            enough about me.
+        </p>
+        <p>
+            I already have a blog on Medium, but I stopped writing there because
+            I realized I was writing for views, and it was hampering my
+            creativity. Plus, if you have an audience focused on one niche on
+            Medium, it's a bit difficult to write about all your random thoughts
+            and opinions.
+        </p>
+        <p>
+            So I created this—something like an online diary where I can write
+            about anything and everything I think or learn about. I promise to
+            express myself as honestly as I can, even to the detriment of my
+            reputation (unhinged lol 🤪).
+        </p>
+        <p>
+            So here goes nothing. I hope you have a swell time here, and you can
+            write to me <a href="mailto:khorus43@gmail.com">here</a>
+            if you want to tell me anything too. Let’s take off🚀!
+        </p>
+    </div>
+</BaseLayout>
+
+<style>
+    .about-image {
+        float: right;
+        margin: -3em -7em 2em 2em;
+        max-width: 300px;
+    }
+
+    .about-image img {
+        border-radius: 8px;
+        margin-bottom: 1.5em;
+    }
+
+    @media (max-width: 1020px) {
+        .about-image {
+            float: none;
+            margin: 0 auto 2em;
+        }
+    }
+</style>
